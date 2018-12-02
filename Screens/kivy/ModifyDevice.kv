@@ -1,0 +1,29 @@
+<ModifyDevice>
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+        
+        Button:
+            text: '< Voltar'
+            size_hint: (.4, .1)
+            on_press: root.manager.current = 'DeviceScreen'
+            
+        Label:
+            text: 'Nome do Dispositivo'
+            size_hint: (1, .1)
+        TextInput:
+            id: txt_nome
+            size_hint: (1, .1)
+        
+        Label:
+            id: lbl_status
+            size_hint: (1, .1)
+            
+        Button:
+            text: 'Alterar Nome do Dispositivo'
+            size_hint: (1, .1)
+            on_press: root.action_change_name()
+            
+        Label:
+            size_hint: (1, .45)

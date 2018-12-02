@@ -1,0 +1,30 @@
+#:kivy 1.0
+
+<AddDeviceScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+
+        Button:
+            text: '< Voltar'
+            size_hint: (.4, .1)
+            on_press: root.manager.current = 'ListScreen'
+
+        Label:
+            text: 'IP do Dispositivo na Rede Local'
+            size_hint: (1,.1)
+        TextInput:
+            id: txt_ip
+            size_hint: (1, .1)
+
+        Label:
+            id: lbl_status
+            size_hint: (1, .6)
+            color: 1, 0, 0, 1
+            text: ''
+
+        Button:
+            text: 'Procurar Dispositivo'
+            size_hint: (1, .1)
+            on_press: root.action_find_device()

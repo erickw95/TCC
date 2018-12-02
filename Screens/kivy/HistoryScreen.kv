@@ -1,0 +1,18 @@
+<HistoryScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+        
+        Button:
+            text: '< Voltar'
+            size_hint: (.4, .1)
+            on_press: root.manager.current = 'DeviceScreen'
+            
+        Label:
+            id: lbl_status
+            text: 'asd'
+            size_hint: (1, .1)
+            
+        ListView:
+            adapter: root.list_adapter

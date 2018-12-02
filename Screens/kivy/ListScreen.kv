@@ -1,0 +1,19 @@
+<ListScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+        
+        Button:
+            text: 'Adicionar Dispositivo Local'
+            size_hint: (1, .1)
+            on_press: root.manager.current = 'AddDeviceScreen'
+        
+        ListView:
+            adapter: root.list_adapter
+            
+        Label:
+            text: ''
+            id: lbl_connection_failure
+            color: 1, 0, 0, 1
+            size_hint: (1, .1)

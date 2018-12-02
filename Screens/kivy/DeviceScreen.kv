@@ -1,0 +1,40 @@
+<DeviceScreen>:
+    
+    bcolor: 1, 1, 1, 1
+
+    BoxLayout:
+        id: box_layout
+        orientation: 'vertical'
+        spacing: 10
+        padding: 10
+        
+        canvas.before:
+            Color:
+                rgba: root.bcolor
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        
+        Button:
+            text: '< Voltar'
+            size_hint: (.4, .1)
+            on_press: root.manager.current = 'ListScreen'
+            
+        Label:
+            text: 'Índice UV:'
+            size_hint: (1, .1)
+            
+        Label:
+            id: lbl_reading
+            text: '--'
+            font_size: '80sp'
+            size_hint: (1, .35)
+            
+        Label:
+            id: lbl_device_name
+            text: 'nome disp'
+            size_hint: (1, .1)
+        Label:
+            id: lbl_status
+            text: ''
+            size_hint: (1, .1)
